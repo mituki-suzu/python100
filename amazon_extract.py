@@ -24,7 +24,6 @@ def access_amazon():
     main_item_indexs = soup.find_all("li", "zg-item-immersion")
 
     amazon_ranking_list = []
-
     for main_item_index in main_item_indexs:
         rank = main_item_index.find("span", "zg-badge-text").get_text()
         title = main_item_index.find("div", "p13n-sc-truncate").get_text().lstrip()
@@ -37,7 +36,7 @@ def main():
     access_amazon()
 
 if __name__ == "__main__":
-    main()\
+    main()
 
 # 記事メモ
 # bs4,urllib インストール
