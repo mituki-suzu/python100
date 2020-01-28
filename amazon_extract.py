@@ -27,9 +27,9 @@ def access_amazon():
 
     for main_item_index in main_item_indexs:
         rank = main_item_index.find("span", "zg-badge-text").get_text()
-        title = main_item_index.find("div", "p13n-sc-truncate p13n-sc-line-clamp-2").get_text().lstrip()
-        item_urls = "https://www.amazon.co.jp" + main_item_index.find("a").attrs['href']
-        amazon_ranking_list.append([rank, title, item_urls])
+        title = main_item_index.find("div", "p13n-sc-truncate").get_text().lstrip()
+        item_url = "https://www.amazon.co.jp" + main_item_index.find("a").attrs['href']
+        amazon_ranking_list.append([rank, title, item_url])
 
     save_csv(amazon_ranking_list)
 
