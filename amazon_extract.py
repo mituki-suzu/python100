@@ -8,8 +8,8 @@ def save_csv(amazon_ranking_list):
     locale.setlocale(locale.LC_CTYPE, "Japanese_Japan.932")
     date_now = datetime.datetime.now()
     name = date_now.strftime('%Y年%m月%d日 %H時%M分') + ".csv"
-    with open(name, "w", encoding='shift_jis', errors="ignore") as f: # 文字コードをShift_JISに指定
-        writer = csv.writer(f, lineterminator="\n") # writerオブジェクトの作成 改行記号で行を区切る
+    with open(name, "w", encoding='shift_jis', errors="ignore") as f:
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerows(amazon_ranking_list)
     
 def access_amazon():
