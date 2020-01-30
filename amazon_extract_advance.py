@@ -43,6 +43,7 @@ def access_amazon():
         save_csv(category_name, amazon_ranking_list)
 
 def main():
+    print("各カテゴリーのランキング上位50位の情報を抽出します。")
     access_amazon()
 
 if __name__ == "__main__":
